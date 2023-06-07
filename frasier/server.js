@@ -1,7 +1,9 @@
 const express = require("express") 
 
-const app = express()
+const morgan = require("morgan")
 
+const app = express()
+app.use(morgan("dev"))
 app.get("/frasier", (req, res) => {
     res.send("Once in prep school, the Existentialist Club once named me 'Most Likely to Be'")
 })
